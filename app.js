@@ -10,4 +10,7 @@ todoApp.controller('TodoCtrl', ['$scope', '$firebaseArray',
         // GET TODOS AS AN ARRAY
         $scope.todos =  meals;
 
+        var orders = $firebaseArray(todosRef.child('orders/5832eefbdddd930f006e361b'));
+        $scope.Orders =  orders;
+
     }]);

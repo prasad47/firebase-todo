@@ -52,70 +52,69 @@
 
     <hr />
 
-    <!--TODO LIST-->
+    <!--&lt;!&ndash;TODO LIST&ndash;&gt;-->
+    <!--<div ng-repeat="todo in todos | filter:{message: 'Fax queued for sending'}"-->
+         <!--class="row list-item"> Pending  <br><br><br>-->
 
-    <h4 ng-show="(todos | filter:{message: 'Fax queued for sending'}).length">Pending</h4>
+        <!--<div class="col-md-6">-->
+            <!--&lt;!&ndash;TODO LABEL&ndash;&gt;-->
+             <!--<span>Fax id :- {{todo.faxId}}</span> <br> <span> Success :- {{todo.success}}</span> <br> <span>Initial message :- {{todo.message}}</span><br> <span> Data On Success :- {{todo.data}}</span>-->
+        <!--</div>-->
 
+    <!--</div>-->
 
-    <div ng-repeat="todo in todos | filter:{message: 'Fax queued for sending'}"
-         class="row list-item">
-
-        <div class="col-md-6">
-
-            <!--TODO LABEL-->
-            <span>{{todo.faxId}}</span> <span>{{todo.message}}</span>   <span>{{todo.data}}</span>
-        </div>
-
+    <div ng-repeat="order in Orders" class="row list-item">
+             {{order}}
     </div>
 
-    <h4 ng-show="(todos | filter:{status: 'in progress'}).length">In Progress</h4>
+  <!--<h4 ng-show="(todos | filter:{status: '!Fax queued for sending'}).length">In Progress</h4> -->
 
-    <div ng-repeat="todo in todos | filter:{status: 'in progress'}"
-         class="row list-item bg-warning">
+    <!--<div ng-repeat="todo in todos | filter:{status: 'in progress'}"-->
+         <!--class="row list-item bg-warning">-->
 
-        <div class="col-md-6">
+        <!--<div class="col-md-6">-->
 
-            <!--TODO LABEL-->
-            <span>{{todo.name}}</span>
-        </div>
-        <div class="col-md-6 text-right">
-            <!--COMPLETED-->
-            <a class="btn btn-primary"
-               ng-click="completeTodo($index, todo)">
-                <i class="glyphicon glyphicon-ok"></i> Complete
-            </a>
+            <!--&lt;!&ndash;TODO LABEL&ndash;&gt;-->
+         <!--<span>{{todo.nameame}}</span>-->
+        <!--</div>-->
+        <!--<div class="col-md-6 text-right">-->
+            <!--&lt;!&ndash;COMPLETED&ndash;&gt;-->
+            <!--<a class="btn btn-primary"-->
+               <!--ng-click="completeTodo($index, todo)">-->
+                <!--<i class="glyphicon glyphicon-ok"></i> Complete-->
+            <!--</a>-->
 
-            <!--DELETE TODO BUTTON-->
-            <a class="btn btn-danger"
-               ng-click="removeTodo($index, todo)">
-                <i class="glyphicon glyphicon-remove"></i> Remove
-            </a>
+            <!--&lt;!&ndash;DELETE TODO BUTTON&ndash;&gt;-->
+            <!--<a class="btn btn-danger"-->
+               <!--ng-click="removeTodo($index, todo)">-->
+                <!--<i class="glyphicon glyphicon-remove"></i> Remove-->
+            <!--</a>-->
 
-        </div>
+        <!--</div>-->
 
-    </div>
+    <!--</div>-->
 
-    <h4 ng-show="(todos | filter:{status: 'complete'}).length">Completed</h4>
+    <!--<h4 ng-show="(todos | filter:{status: 'complete'}).length">Completed</h4>-->
 
-    <div ng-repeat="todo in todos | filter:{status: 'complete'}"
-         class="row list-item bg-success">
+    <!--<div ng-repeat="todo in todos | filter:{status: 'complete'}"-->
+         <!--class="row list-item bg-success">-->
 
-        <div class="col-md-6">
+        <!--<div class="col-md-6">-->
 
-            <!--TODO LABEL-->
-            <span>{{todo.name}}</span>
-        </div>
-        <div class="col-md-6 text-right">
+            <!--&lt;!&ndash;TODO LABEL&ndash;&gt;-->
+            <!--<span>{{todo.name}}</span>-->
+        <!--</div>-->
+        <!--<div class="col-md-6 text-right">-->
 
-            <!--DELETE TODO BUTTON-->
-            <a class="btn btn-danger"
-               ng-click="removeTodo($index, todo)">
-                <i class="glyphicon glyphicon-remove"></i> Remove
-            </a>
+            <!--&lt;!&ndash;DELETE TODO BUTTON&ndash;&gt;-->
+            <!--<a class="btn btn-danger"-->
+               <!--ng-click="removeTodo($index, todo)">-->
+                <!--<i class="glyphicon glyphicon-remove"></i> Remove-->
+            <!--</a>-->
 
-        </div>
+        <!--</div>-->
 
-    </div>
+    <!--</div>-->
 
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="app.js"></script>
